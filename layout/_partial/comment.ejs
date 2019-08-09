@@ -1,0 +1,12 @@
+﻿<% if (config.disqus_shortname && page.comments){ %>
+<section id="comment">
+  <!--PC版-->
+<div id="SOHUCS" ></div>
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+window.changyan.api.config({
+appid: 'cyun3lalj',
+conf: 'prod_c64f5dc3d10efce13bc07dcec4d54058'
+});
+</script>
+<% } %>
