@@ -1,12 +1,15 @@
-﻿<% if (config.disqus_shortname && page.comments){ %>
-<section id="comment">
-  <!--PC版-->
-<div id="SOHUCS" ></div>
-<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-window.changyan.api.config({
-appid: 'cyun3lalj',
-conf: 'prod_c64f5dc3d10efce13bc07dcec4d54058'
-});
-</script>
+﻿<% if (theme.changyan && theme.changyan_appid && theme.changyan_appkey){ %>
+    <%- partial('post/changyan') %>
+<% } %>
+
+<% if (theme.valine.enable && theme.valine.appid && theme.valine.appkey){ %>
+    <%- partial('post/valine', {
+      key: post.slug,
+      title: post.title,
+      url: config.url+url_for(post.path)
+    }) %>
+<% } %>
+
+<% if (config.disqus_shortname) { %>
+    <%- partial('post/disqus') %>
 <% } %>

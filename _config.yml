@@ -49,9 +49,23 @@ share: false
 #若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
 # duoshuo: your duoshuo id
 
-changyan: true
-changyan_appid:  cyun3lalj
+#畅言评论
+changyan: false
+changyan_appid: cyun3lalj
 changyan_appkey: 4b366e446227cae74d459021c1fcfeae
+
+#valine评论
+valine:
+  enable: true
+  appid: O4LSonXhAwpmklypJ9B8e7uy-gzGzoHsz
+  appkey: RfIhtH91aAwSkPlxvWiY7ocE
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: Just go go # comment box placeholder
+  avatar: wavatar # gravatar style
+  guest_info: nick,mail,link # custom comment header
+  visitor: false # 阅读量统计
+  pageSize: 10 # pagination size
 
 #是否开启云标签
 tagcloud: true
